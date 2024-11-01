@@ -6,8 +6,8 @@ import { CeremonyController } from './systems/CeremonyController.js';
 export class GameController {
     constructor() {
         this.setupScene();
-        this.setupSystems();
         this.setupState();
+        this.setupSystems();
         this.setupControls();
         this.bindEvents();
         
