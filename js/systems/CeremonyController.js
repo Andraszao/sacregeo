@@ -71,4 +71,20 @@ export class CeremonyController {
         }
 
         npcs.forEach((npc, index) => {
-            this.dancePatterns[this.currentPattern](npc,
+            this.dancePatterns[this.currentPattern](npc, index, time, npcs.length);
+        });
+
+        // Update mandala shader uniforms
+        if (this.mandala && this.mandala.material) {
+            this.mandala.material.uniforms.time.value = time;
+        }
+    }
+
+    startCeremony() {
+        this.scene.add(this.mandala);
+    }
+
+    endCeremony() {
+        this.scene.remove(this.mandala);
+    }
+}
