@@ -1,0 +1,54 @@
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background: #000008;
+    font-family: Arial, sans-serif;
+}
+
+#experience-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#experience-fill {
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: width 0.3s;
+}
+
+#mandala-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+}
